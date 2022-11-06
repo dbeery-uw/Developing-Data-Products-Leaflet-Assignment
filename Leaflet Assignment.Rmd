@@ -1,0 +1,31 @@
+---
+title: "Leaflet Web Page"
+author: "Danny Beery"
+date: "2022-11-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, message = FALSE, eval = TRUE}
+library(leaflet)
+library(tidyr)
+library(dplyr)
+my_map <- leaflet() %>%
+  addTiles()
+```
+
+## My First Map!
+
+Map of Seattle with a marker at University of Washington. Marker links to UW Home Page. Go Dawgs!
+
+```{r}
+library(leaflet)
+my_map <- my_map %>%
+  addTiles() %>%
+  addCircleMarkers(popup = "<a href='https://washington.edu'> GO DAWGS (UW Home Page)</a>", lat = 47.655548, lng = -122.303200)
+my_map
+```
+
