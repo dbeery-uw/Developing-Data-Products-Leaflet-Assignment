@@ -26,6 +26,6 @@ library(leaflet)
 my_map <- my_map %>%
   addTiles() %>%
   addCircleMarkers(popup = "<a href='https://washington.edu'> GO DAWGS (UW Home Page)</a>", lat = 47.655548, lng = -122.303200)
-my_map
+print(my_map)
 ```
 
